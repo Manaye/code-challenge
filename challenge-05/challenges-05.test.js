@@ -26,6 +26,8 @@ const howMuchPencil = (str) => {
   return result;
 };
 
+
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -46,6 +48,7 @@ const wordsToCharList = (arr) => {
   arr.pop();
   return arr;
 };
+
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,11 +95,11 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
    let result = [];
-    let substring = 'gallons'||'pound'||'cup'||'meduim-sized';
+    // let substring = 'gallons'||'pounds'||'cups'||'meduim-sized';
   for(let i = 0; i<gruffaloCrumble.ingredients.length; i++){
 
     
-    let str = gruffaloCrumble.ingredients[i].slice(gruffaloCrumble.ingredients[i].indexOf(substring)+1);
+    let str = gruffaloCrumble.ingredients[i].slice(gruffaloCrumble.ingredients[i].indexOf('gallons'||'pounds'||'cups'||'meduim-sized')+1);
     result.push(str);
 
   }
@@ -213,7 +216,6 @@ const totalSumCSV = (str) => {
   return total;
 };
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
 
@@ -269,6 +271,7 @@ const extractVowels = (str) => {
  console.log(result);
  return result;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
